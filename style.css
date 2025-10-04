@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+    font-family: "Times New Roman";
+    color: #f286aa;
+}
+
+body{
+    background-color: #5f5c60;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+li{
+    list-style: none;
+}
+
+ul>li::before{
+    content: "–";
+}
+
+.profile-link{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: black solid 10px;
+}
+
+.personal-info > h2::first-letter{
+    color: black;
+}
+
+.highlight-word{
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.lowercased-word{
+    text-transform: lowercase;
+}
+
+.uppercased-word{
+    text-transform: uppercase;
+}
+
+.personal-info-text{
+    text-align: center;
+    word-spacing: 10px;
+    text-indent: 2em;
+}
+
+.personal-info{
+    text-align: center;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: black;
+}
+
+.icon{
+    width: 20px;
+    height: 20px;
+    fill: black;
+}
+
+.contact-link:hover{
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.contact-item:hover .icon{
+    fill: #007bff;
+}
