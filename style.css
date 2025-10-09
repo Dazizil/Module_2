@@ -1,83 +1,71 @@
-/*overwrote default fonts for all elements*/
-/*changed default font color*/
 *{
     box-sizing: border-box;
-    font-family: "Times New Roman";
-    color: #f286aa;
 }
 
-body{
-    background-color: #5f5c60;
+/*Wrapper for the table so it can scroll*/
+.table-wrapper{
+    width: 600px;
+    height: 400px;
+    overflow: auto;
+    margin: auto;
 }
 
-a{
-    text-decoration: none;
-    color: inherit;
+table{
+    margin: auto;
+    overflow: hidden;
+    border-collapse: collapse;
+    border: 2px solid black;
+    table-layout: fixed;
 }
 
-/*removed default list markers*/
-li{
-    list-style: none;
+th{
+    background-color: lightgrey ;
 }
 
-.profile-link{
-    height: 200px;
-    width: 200px;
-    border-radius: 50%;
-    border: black solid 10px;
+/*Each table body cell trim's the row and deliver "..." if the row is too long to fit in the cell */
+td, th{
+    border: 1px solid black;
+    padding:10px 20px 10px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
-.highlight-word{
-    font-size: 20px;
-    letter-spacing: 5px;
+tbody td{
+    max-width: 150px;
 }
 
-.lowercased-word{
-    text-transform: lowercase;
+tfoot{
+    font-weight: bold;
+    font-style: italic;
 }
 
-.uppercased-word{
-    text-transform: uppercase;
+form{
+    margin: 50px auto;
+    width: 600px;
 }
 
-/*sentence with increased word spacing*/
-/*The "Personal Information" section start's with a red line*/
-.personal-info-text{
-    word-spacing: 10px;
-    text-indent: 2em;
+label{
+    display: inline-block;
+    margin: 7px;
 }
 
-.personal-info{
-    text-align: center;
+.horizontal-header{
+    border: 1px solid black;
+    font-style: italic;
 }
 
-.contact-link{
-    text-decoration: none;
-    color: black;
+.vertical-header{
+    text-align: end;
 }
 
-.icon-for-contact{
-    width: 20px;
-    height: 20px;
-    fill: black;
+/*This text area expands horizontally only*/
+#textarea{
+    resize: horizontal;
+    caret-color: red;
 }
 
-/*Text links underlined in a color different from the default color when hovering over them*/
-.contact-link:hover{
-    text-decoration: underline;
-    color: #007bff;
-}
-
-.contact-item:hover .icon{
-    fill: #007bff;
-}
-
-/*The "Personal Information" section start's with a stylized first letter*/
-.personal-info > h2::first-letter{
-    color: black;
-}
-
-/*List markers made with pseudo element*/
-ul>li::before{
-    content: "–";
+/*When hovering over optional area, the mouse cursor changes to an arbitrary one*/
+#optional-area{
+    cursor: help;
 }
