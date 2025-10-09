@@ -2,70 +2,103 @@
     box-sizing: border-box;
 }
 
-/*Wrapper for the table so it can scroll*/
-.table-wrapper{
-    width: 600px;
-    height: 400px;
-    overflow: auto;
-    margin: auto;
+/*centering the entire page content horizontally*/
+body{
+    display: flex;
+    justify-content: center;
 }
 
-table{
-    margin: auto;
-    overflow: hidden;
-    border-collapse: collapse;
-    border: 2px solid black;
-    table-layout: fixed;
+
+/*header takes the full width of its parent with a fixed maximum height equals 50px*/
+header{
+    width: 100%;
+    max-height: 50px;
+    background-color: lightblue;
 }
 
-th{
-    background-color: lightgrey ;
+aside{
+    max-height: 50vh;
+    max-width: 400px;
+    min-width: 200px;
+    height: 50vh;
+    width: 100%;
+    background-color: lightseagreen;
 }
 
-/*Each table body cell trim's the row and deliver "..." if the row is too long to fit in the cell */
-td, th{
+main{
+    width: 100%;
+    background-color: lightgray;
+}
+
+/*footer with fixed height at the bottom of the page*/
+footer{
+    width: 100%;
+    max-height: 50px;
+    background-color: tan;
+}
+
+/*main grid container for the entire page layout with three rows*/
+.page-grid{
+    display: grid;
+    grid-template-rows: 50px 1fr 50px ;
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+    gap: 20px;
+    max-width: 1500px;
+    width:100%;
+    height: 100vh;
+}
+
+/*grid container for aside and main*/
+.aside-main-grid{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 4fr;
+    max-width: 1500px;
+    width: 100%;
+    gap: 20px;
+}
+
+/*For desktops each row contains four cards*/
+.cards-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 10px;
+}
+
+/*styles for cards*/
+.card{
+    max-height: 200px;
+    min-width: 200px;
+    text-align: center;
+    font-size: 1rem;
+    background-color: white;
+    color: black;
     border: 1px solid black;
-    padding:10px 20px 10px 20px;
+    border-radius: 10px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
 }
 
-tbody td{
-    max-width: 150px;
+/*Adaptive for tablets, with three cards per row*/
+@media (max-width: 1024px) {
+    aside{
+        max-width: 100%;
+        width: 100%;
+        height: 100px;
+    }
+    .aside-main-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows:100px 1fr;
+    }
+    .cards-grid{
+        grid-template-columns: repeat(3,1fr);
+    }
 }
 
-tfoot{
-    font-weight: bold;
-    font-style: italic;
+/*Adaptive for mobiles, with two cards per row*/
+@media (max-width: 768px){
+    .cards-grid{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
 
-form{
-    margin: 50px auto;
-    width: 600px;
-}
-
-label{
-    display: inline-block;
-    margin: 7px;
-}
-
-.horizontal-header{
-    border: 1px solid black;
-    font-style: italic;
-}
-
-.vertical-header{
-    text-align: end;
-}
-
-/*This text area expands horizontally only*/
-#textarea{
-    resize: horizontal;
-    caret-color: red;
-}
-
-/*When hovering over optional area, the mouse cursor changes to an arbitrary one*/
-#optional-area{
-    cursor: help;
-}

@@ -1,233 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta lang="en">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Normalization of browser styles-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="style.css">
-  <title>Stage 2</title>
+    <meta charset="UTF-8">
+    <meta lang="en">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--Normalization of browser styles-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Stage 4</title>
 </head>
 <body>
-  <!--Wrapper for the table so it can scroll-->
-  <div class="table-wrapper">
-    <!--Start of table-->
-    <table>
-      <caption>table</caption>
-      <!--Table header-->
-      <thead>
-        <tr>
-          <th></th>
-          <th class="horizontal-header">Header</th>
-          <th class="horizontal-header">Header</th>
-          <th class="horizontal-header">Header</th>
-          <th class="horizontal-header">Header</th>
-          <th class="horizontal-header">Header</th>
-          <th class="horizontal-header">Header</th>
-        </tr>
-      </thead>
-      <!--End of table header-->
 
-      <!--Table body-->
-      <tbody>
-        <!--First table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+    <!--The page layout is built with CSS Grid, requiring a grid container for the overall structure-->
+    <div class="page-grid">
+        <header>Header</header>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+        <div class="aside-main-grid">
+            <aside>Aside</aside>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+            <!--Main part starts-->
+            <main>
+                <!--A card with a lot of information to show that if the height of the content of one card in the row is greater than the content of other cards - the height of all cards in the row corresponds to the greatest height-->
+                <div class="cards-grid">
+                    <article class="card">
+                        <h1>Header of the card</h1>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </article>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+                    <!--Standard card templates-->
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
-        <!--Table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
-        <!--Last table row-->
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td>Body</td>
-          <td>Body</td>
-          <td>A very long description that should be truncated and not stretch the cell</td>
-          <td>Body</td>
-          <td>Body</td>
-          <td>Body</td>
-        </tr>
-      </tbody>
-      <!--End of table body-->
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
 
+                    <article class="card">
+                        <h1>Name</h1>
+                        <p>Description</p>
+                    </article>
+                </div>
+            </main>
+            <!--Main part ends-->
+        </div>
 
-      <!--Table footer-->
-      <tfoot>
-        <tr>
-          <th class="vertical-header">Header</th>
-          <td style="text-align: center" colspan="6">Footer</td>
-        </tr>
-      </tfoot>
-      <!--End of table footer-->
-
-    </table>
-    <!--End of table-->
-  </div>
-  <!--End of wrapper-->
-
-  <!--Form start-->
-  <form action="" method="post">
-    <fieldset>
-      <legend>Form</legend>
-
-      <!--Text field with minimum number of characters allowed in the fields is 2-->
-      <label  for="input1">Text: <input id="input1" placeholder="Enter text..." minlength="2" required></label>
-      <br/>
-
-      <!--Text field with minimum number of characters allowed in the fields is 2-->
-      <label for="input2">Text: <input id="input2" placeholder="Enter text..." minlength="2" required></label>
-      <br/>
-
-      <!--Text input for email-->
-      <label for="email">Email: <input id="email" placeholder="Enter an email..." type="email" required></label>
-      <br/>
-
-      <!--Text input for phone number according to a specified pattern -->
-      <label for="phone">Phone number: <input id="phone" placeholder="Enter an phone number" type="tel" pattern="[+]{1}[1-9]{1,3}[0-9]{9,10}" required></label>
-      <br/>
-
-      <!--a drop-down list with the ability to select the desired option-->
-      <section>
-        <label>
-          Select:
-          <select id="select" required>
-            <option value="option1">Option 1</option>
-            <option value="option2">Option 2</option>
-            <option value="option3">Option 3</option>
-          </select>
-        </label>
-      </section>
-
-      <!--field with the ability to enter only digits. The default value for this field is 42-->
-      <label for="number">Number: <input id="number" placeholder="Enter a number" type="number" value="42" required></label>
-      <br/>
-
-      <!--a group of radio buttons. Enabling each next radio button disabling the previous one-->
-      <section>
-        <label for="option1">Option 1
-          <input type="radio" id="option1" name="group1" required>
-        </label>
-        <br/>
-
-        <label for="option1">Option 2
-          <input type="radio" id="option2" name="group1" required>
-        </label>
-        <br/>
-
-        <label for="option1">Option 3
-          <input type="radio" id="option3" name="group1" required>
-        </label>
-        <br/>
-      </section>
-
-      <!--a field with the ability to enter multi-line text and expanding horizontally only-->
-      <label for="textarea">Text area:
-        <textarea id="textarea" placeholder="Enter a text" required></textarea>
-        <br/>
-      </label>
-
-      <!--a field, the value of which is not visible in the field and is replaced by "*" characters-->
-      <label>Password: <input type="password" id="password" placeholder="Enter a password" required>
-        <br/>
-      </label>
-
-      <!--an optional inactive field, which is different in style from the other fields. When hovering over this field, the mouse cursor changes to an arbitrary one-->
-      <label for="optional-area">Optional area:<input type="text" id="optional-area" placeholder="Disabled" disabled>
-      </label>
-      <br/>
-
-      <!--a checkbox with a description. Clicking on the text turn's the checkbox on/off-->
-      <label for="agree">
-        <input type="checkbox" id="agree" required> Checkbox
-      </label>
-      <br/>
-
-      <!--a button that sends the form to the specified address-->
-      <button type="submit">Submit</button>
-    </fieldset>
-  </form>
-  <!--Form finish-->
+        <footer>Footer</footer>
+    </div>
 </body>
 </html>
