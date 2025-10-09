@@ -1,3 +1,5 @@
+/*overwrote default fonts for all elements*/
+/*changed default font color*/
 *{
     box-sizing: border-box;
     font-family: "Times New Roman";
@@ -13,12 +15,9 @@ a{
     color: inherit;
 }
 
+/*removed default list markers*/
 li{
     list-style: none;
-}
-
-ul>li::before{
-    content: "–";
 }
 
 .profile-link{
@@ -26,10 +25,6 @@ ul>li::before{
     width: 200px;
     border-radius: 50%;
     border: black solid 10px;
-}
-
-.personal-info > h2::first-letter{
-    color: black;
 }
 
 .highlight-word{
@@ -45,8 +40,9 @@ ul>li::before{
     text-transform: uppercase;
 }
 
+/*sentence with increased word spacing*/
+/*The "Personal Information" section start's with a red line*/
 .personal-info-text{
-    text-align: center;
     word-spacing: 10px;
     text-indent: 2em;
 }
@@ -60,12 +56,13 @@ ul>li::before{
     color: black;
 }
 
-.icon{
+.icon-for-contact{
     width: 20px;
     height: 20px;
     fill: black;
 }
 
+/*Text links underlined in a color different from the default color when hovering over them*/
 .contact-link:hover{
     text-decoration: underline;
     color: #007bff;
@@ -73,4 +70,14 @@ ul>li::before{
 
 .contact-item:hover .icon{
     fill: #007bff;
+}
+
+/*The "Personal Information" section start's with a stylized first letter*/
+.personal-info > h2::first-letter{
+    color: black;
+}
+
+/*List markers made with pseudo element*/
+ul>li::before{
+    content: "–";
 }
