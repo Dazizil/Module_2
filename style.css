@@ -1,83 +1,90 @@
-/*overwrote default fonts for all elements*/
-/*changed default font color*/
-*{
+/* === Base Styles === */
+* {
     box-sizing: border-box;
-    font-family: "Times New Roman";
+    font-family: "Times New Roman", serif;
     color: #f286aa;
 }
 
-body{
+body {
     background-color: #5f5c60;
+    margin: 0;
+    padding: 0;
 }
 
-a{
+main a {
     text-decoration: none;
     color: inherit;
 }
 
-/*removed default list markers*/
-li{
+main li {
     list-style: none;
+    position: relative;
+    padding-left: 1em;
 }
 
-.profile-link{
-    height: 200px;
+/* Custom list markers */
+main ul > li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* === Profile Image === */
+.profile-link {
     width: 200px;
+    height: 200px;
     border-radius: 50%;
-    border: black solid 10px;
+    border: 10px solid #000;
 }
 
-.highlight-word{
+/* === Text Formatting === */
+.highlight-word {
     font-size: 20px;
     letter-spacing: 5px;
 }
 
-.lowercased-word{
+.lowercased-word {
     text-transform: lowercase;
 }
 
-.uppercased-word{
+.uppercased-word {
     text-transform: uppercase;
 }
 
-/*sentence with increased word spacing*/
-/*The "Personal Information" section start's with a red line*/
-.personal-info-text{
+/* === Personal Info Section === */
+.personal-info {
+    text-align: center;
+}
+
+.personal-info-text {
     word-spacing: 10px;
     text-indent: 2em;
 }
 
-.personal-info{
-    text-align: center;
+/* Stylized first letter of the paragraph */
+.personal-info-text::first-letter {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
 }
 
-.contact-link{
-    text-decoration: none;
-    color: black;
-}
-
-.icon-for-contact{
+/* === Contacts === */
+.icon-for-contact {
     width: 20px;
     height: 20px;
-    fill: black;
+    fill: #000;
 }
 
-/*Text links underlined in a color different from the default color when hovering over them*/
-.contact-link:hover{
+.contact-link {
+    color: #000;
+}
+
+.contact-link:hover {
     text-decoration: underline;
     color: #007bff;
 }
 
-.contact-item:hover .icon{
+.contact-item:hover .icon-for-contact {
     fill: #007bff;
-}
-
-/*The "Personal Information" section start's with a stylized first letter*/
-.personal-info > h2::first-letter{
-    color: black;
-}
-
-/*List markers made with pseudo element*/
-ul>li::before{
-    content: "–";
 }
