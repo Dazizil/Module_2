@@ -1,71 +1,75 @@
-*{
+/* === Global Reset === */
+* {
     box-sizing: border-box;
 }
 
-/*Wrapper for the table so it can scroll*/
-.table-wrapper{
+/* === Table Wrapper === */
+.table-wrapper {
     width: 600px;
     height: 400px;
+    margin: auto;
     overflow: auto;
-    margin: auto;
 }
 
-table{
+/* === Table === */
+table {
     margin: auto;
-    overflow: hidden;
+    border: 2px solid #000;
     border-collapse: collapse;
-    border: 2px solid black;
     table-layout: fixed;
+    overflow: hidden;
 }
 
-th{
-    background-color: lightgrey ;
+th {
+    background-color: #d3d3d3;
 }
 
-/*Each table body cell trim's the row and deliver "..." if the row is too long to fit in the cell */
-td, th{
-    border: 1px solid black;
-    padding:10px 20px 10px 20px;
+/* Each table cell trims long text and shows "..." if it overflows */
+tbody td, th {
+    border: 1px solid #000;
+    padding: 10px 20px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-tbody td{
+tbody td {
     max-width: 150px;
 }
 
-tfoot{
+tfoot {
     font-weight: bold;
     font-style: italic;
 }
 
-form{
-    margin: 50px auto;
-    width: 600px;
+/* === Table Headers === */
+.horizontal-header {
+    border: 1px solid #000;
+    font-style: italic;
 }
 
-label{
+.vertical-header {
+    text-align: end;
+}
+
+/* === Form === */
+form {
+    width: 600px;
+    margin: 50px auto;
+}
+
+label {
     display: inline-block;
     margin: 7px;
 }
 
-.horizontal-header{
-    border: 1px solid black;
-    font-style: italic;
-}
-
-.vertical-header{
-    text-align: end;
-}
-
-/*This text area expands horizontally only*/
-#textarea{
+/* Text area expands horizontally only */
+textarea {
     resize: horizontal;
-    caret-color: red;
+    caret-color: #ff0000;
 }
 
-/*When hovering over optional area, the mouse cursor changes to an arbitrary one*/
-#optional-area{
+/* Cursor changes when hovering over the optional area */
+#disabled-field {
     cursor: help;
 }
