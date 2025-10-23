@@ -2,52 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta lang="en">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--Normalization of browser styles-->
+    <!-- Normalize browser styles -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
     <link rel="stylesheet" href="style.css">
     <title>Stage 3</title>
 </head>
 <body>
-
-    <!--Decided to make the navigation menu as a header-->
-    <!--Header start-->
+    <!-- Header with navigation menu -->
     <header>
-
-        <!--a clickable logo with a label on the left side of the menu-->
-        <a href="https://www.apple.com/app-store/" target="_blank">
-            <img id="app-store" src="/Assets/logos_apple-app-store.svg" alt="App store">
-            <label for="app-store">App store</label>
+        <!-- Clickable logo with label -->
+        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+            <img id="app-store-icon" src="/Assets/logos_apple-app-store.svg" alt="App Store icon">
+            <label for="app-store-icon">App Store</label>
         </a>
 
-        <!--4 navigation links at the center-->
-        <nav class="middle-part">
+        <!-- Navigation links -->
+        <nav class="header-navigation">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
         </nav>
 
-        <!--Hidden hamburger menu image in the desktop version to open it in the mobile version-->
-        <div class="right-part">
+        <!-- Right side with hamburger and avatar -->
+        <div class="header-actions">
             <label for="hamburger-toggle" class="hamburger-btn">
                 <img src="/Assets/menu-svgrepo-com.svg" alt="Menu">
             </label>
 
-            <!--an avatar icon on the right side of the menu-->
             <a href="#">
-            <img id="pfp" src="/Assets/AccountImage.svg" alt="pfp">
+                <img id="profile-picture" src="/Assets/AccountImage.svg" alt="Profile picture">
             </a>
         </div>
     </header>
-    <!--Header end-->
 
-    <!--The checkbox itself for the hamburger menu-->
+    <!-- Hidden checkbox for mobile menu -->
     <input type="checkbox" id="hamburger-toggle">
 
-    <!--Hidden hamburger menu for mobile version-->
-    <nav id="hamburger">
+    <!-- Mobile hamburger menu -->
+    <nav id="hamburger-menu">
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Services</a>
