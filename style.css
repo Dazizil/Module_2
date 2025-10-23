@@ -1,39 +1,39 @@
-*{
+/* === Global Reset === */
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-/*Centering the card component both horizontally and vertically on the page*/
-body{
+/* === Page Layout === */
+body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
 }
 
-img{
+/* === Image === */
+img {
     width: 540px;
     border-radius: 10px;
     visibility: hidden;
-    animation: img-appear 1s ease-out 1.5s 1 forwards ;
+    animation: img-appear 1s ease-out 1.5s 1 forwards;
 }
 
-/*Main card container*/
-/*Background of the card is gradient*/
-/*Card casts a shadow*/
-figure{
+/* === Card === */
+figure {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 50%;
     height: fit-content;
     text-align: center;
-    color: white;
+    color: rgb(255, 255, 255);
     box-shadow: 9px 6px 14px 8px rgba(0, 0, 0, 0.2);
-    background: linear-gradient(to bottom, #181818,#b2b2b2,#242424);
+    background: linear-gradient(to bottom, rgb(24, 24, 24), rgb(178, 178, 178), rgb(36, 36, 36));
     border-radius: 20px;
-    animation: loading-fade-in 1.5s ease-out 0s 1 ;
+    animation: loading-fade-in 1.5s ease-out 0s 1;
 }
 
 .img-container {
@@ -42,40 +42,38 @@ figure{
     margin-top: 20px;
 }
 
-/*Hover effect: increasing the size of the card, changing backround color, changing the position of the card, changing transparency */
-figure:hover{
+/* === Interactions === */
+figure:hover {
     width: 70%;
-    color: black;
-    background: linear-gradient(90deg, #ceddd6,#b9babf,#f1bfa4);
+    color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(206, 221, 214), rgb(185, 186, 191), rgb(241, 191, 164));
     opacity: 0.6;
-    transform:translate(0px,-100px);
+    transform: translate(0px, -100px);
 }
 
-/*Active state: card scale, card rotate, card tilt*/
-figure:active{
-    transform: scale(1.3) rotate(30deg) skew(30deg,10deg);
+figure:active {
+    transform: scale(1.3) rotate(30deg) skew(30deg, 10deg);
 }
 
-/*Animation implementing fade in effect, card rotation and changing background color*/
+/* === Animations === */
 @keyframes loading-fade-in {
-    from{
-        background: black;
+    from {
+        background: rgb(0, 0, 0);
         opacity: 0;
-        transform:rotate(45deg);
+        transform: rotate(45deg);
     }
-    to{
+    to {
         opacity: 1;
-        transform:rotate(0deg);
+        transform: rotate(0deg);
     }
 }
 
-/*Animation for smooth image appearance*/
 @keyframes img-appear {
-    from{
+    from {
         visibility: visible;
         width: 0;
     }
-    to{
+    to {
         visibility: visible;
         width: 540px;
     }
