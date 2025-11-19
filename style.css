@@ -1,7 +1,13 @@
+/* === Fonts === */
+@font-face {
+    src: url("Assets/Roboto_SemiCondensed-Medium.ttf");
+    font-family: 'Roboto SemiCondensed Medium';
+}
+
 /* === Base Styles === */
 * {
     box-sizing: border-box;
-    font-family: "Times New Roman", serif;
+    font-family: 'Roboto SemiCondensed Medium';
     color: #f286aa;
 }
 
