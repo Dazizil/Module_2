@@ -1,8 +1,3 @@
-/* === Global Reset === */
-* {
-    box-sizing: border-box;
-}
-
 /* === Table Wrapper === */
 .table-wrapper {
     width: 600px;
@@ -50,26 +45,4 @@ tfoot {
 
 .vertical-header {
     text-align: end;
-}
-
-/* === Form === */
-form {
-    width: 600px;
-    margin: 50px auto;
-}
-
-label {
-    display: inline-block;
-    margin: 7px;
-}
-
-/* Text area expands horizontally only */
-textarea {
-    resize: horizontal;
-    caret-color: #ff0000;
-}
-
-/* Cursor changes when hovering over the optional area */
-#disabled-field {
-    cursor: help;
 }

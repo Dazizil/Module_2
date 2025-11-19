@@ -6,7 +6,9 @@
   <title>Stage 2</title>
   <!-- Normalize default browser styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="global.css">
 </head>
 <body>
   <!-- Table wrapper -->
@@ -127,8 +129,8 @@
   </div>
 
   <!-- Form section -->
-  <form method="post">
-    <fieldset>
+  <form method="post" action="">
+    <fieldset class="form-group">
       <legend>Form</legend>
 
       <!-- Text field with minimum number of characters allowed (2) -->
@@ -143,7 +145,6 @@
                 required
       >
       </label>
-      <br>
 
       <!-- Another text field with minimum number of characters allowed (2) -->
       <label for="second-input">
@@ -157,14 +158,12 @@
                 required
         >
       </label>
-      <br>
 
       <!-- Text input for email -->
       <label for="email-input">
         Email:
         <input id="email-input" name="email" type="email" placeholder="Enter an email..." required>
       </label>
-      <br>
 
       <!-- Text input for phone number according to a specified pattern -->
       <label for="phone-input">
@@ -178,7 +177,6 @@
                 required
         >
       </label>
-      <br>
 
       <!-- Drop-down list with the ability to select the desired option -->
       <label for="select">
@@ -189,7 +187,6 @@
           <option value="option-3">Option 3</option>
         </select>
       </label>
-      <br>
 
       <!-- Field for entering only digits. Default value is 42 -->
       <label for="number-input">
@@ -203,7 +200,6 @@
                 required
         >
       </label>
-      <br>
 
       <!-- Group of radio buttons. Selecting one disables the others -->
       <section class="radio-group">
@@ -212,48 +208,41 @@
           <input id="radio-1" name="group-1" type="radio" required>
           Option 1
         </label>
-        <br>
 
         <label for="radio-2">
           <input id="radio-2" name="group-1" type="radio" required>
           Option 2
         </label>
-        <br>
 
         <label for="radio-3">
           <input id="radio-3" name="group-1" type="radio" required>
           Option 3
         </label>
       </section>
-      <br>
 
       <!-- Multiline text field that expands horizontally only -->
       <label for="textarea">
         Text area:
         <textarea id="textarea" name="textarea" placeholder="Enter text" required></textarea>
       </label>
-      <br>
 
       <!-- Field where entered value is hidden and replaced by "*" -->
       <label for="password-input">
         Password:
         <input id="password-input" name="password" type="password" placeholder="Enter a password" required>
       </label>
-      <br>
 
       <!-- Optional inactive field. Changes cursor on hover -->
       <label for="disabled-field">
         Optional area:
         <input id="disabled-field" type="text" placeholder="Disabled" disabled>
       </label>
-      <br>
 
       <!-- Checkbox with label text toggling the state -->
       <label for="agree">
         <input id="agree" name="agree" type="checkbox" required>
         Checkbox
       </label>
-      <br>
 
       <!-- Button that submits the form -->
       <button type="submit">Submit</button>
