@@ -1,0 +1,151 @@
+/* === Base Styles === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    font-size: 24px;
+}
+
+/* === Header === */
+.header-container{
+    display: flex;
+    justify-content: center;
+    width: 1280px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1280px;
+    width: 100%;
+    height: 60px;
+    background-color: rgb(143, 188, 143);
+    text-decoration: none;
+}
+
+/* === Links === */
+a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:active {
+    color: rgb(255, 255, 255);
+}
+
+/* === Navigation === */
+.header-navigation {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.navigation-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Hamburger Menu === */
+#hamburger-toggle {
+    display: none;
+}
+
+.hamburger-btn {
+    display: none;
+}
+
+/* === Profile Picture === */
+#profile-picture:hover {
+    border-radius: 50%;
+    background-color: rgb(211, 211, 211);
+}
+
+/* === Responsive: up to 690px === */
+@media (max-width: 690px) {
+    /* === Base Layout === */
+    body {
+        font-size: 20px;
+    }
+
+    /* === Header === */
+    .header-container{
+        width: 100%;
+    }
+
+    /* === Navigation === */
+    .header-navigation {
+        gap: 20px;
+    }
+}
+
+/* === Responsive: up to 420px === */
+@media (max-width: 420px) {
+    /* === Base Layout === */
+    body {
+        font-size: 18px;
+        flex-direction: column;
+    }
+
+    /* === Header === */
+    header {
+        width: 100%;
+        height: 100px;
+    }
+
+    /* === Navigation === */
+    .header-navigation {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 0;
+        font-size: 30px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 20px 0;
+        z-index: 10;
+    }
+
+    /* === Logo === */
+    .app-store-label{
+        display: none;
+    }
+
+    #app-store-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* === Profile Picture === */
+    #profile-picture {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* === Hamburger Menu === */
+    .hamburger-btn {
+        display: flex;
+    }
+
+    #hamburger-toggle:checked ~ .header-container header .header-navigation {
+        display: flex;
+    }
+}

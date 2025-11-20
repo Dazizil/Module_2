@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Normalize browser styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Stage 3</title>
+</head>
+<body>
+
+<!-- Hidden checkbox for mobile menu -->
+<input type="checkbox" id="hamburger-toggle">
+
+<div class="header-container">
+    <!-- Header with navigation menu -->
+    <header>
+        <!-- Clickable logo with label -->
+        <a class="navigation-link" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" aria-label="App Store">
+            <img id="app-store-icon" src="/Assets/logos_apple-app-store.svg" alt="App Store icon">
+            <span class="app-store-label">App Store</span>
+        </a>
+
+        <!-- Navigation links -->
+        <nav class="header-navigation">
+            <a class="navigation-link" href="#">Home</a>
+            <a class="navigation-link" href="#">About</a>
+            <a class="navigation-link" href="#">Services</a>
+            <a class="navigation-link" href="#">Contact</a>
+        </nav>
+
+        <!-- Right side with hamburger and avatar -->
+        <div class="header-actions">
+            <label for="hamburger-toggle" class="hamburger-btn">
+                <img src="/Assets/menu-svgrepo-com.svg" alt="Menu">
+            </label>
+
+            <a href="#">
+                <img id="profile-picture" src="/Assets/AccountImage.svg" alt="Profile picture">
+            </a>
+        </div>
+    </header>
+</div>
+
+</body>
+</html>
