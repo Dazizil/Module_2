@@ -12,11 +12,17 @@ body {
 }
 
 /* === Header === */
+.header-container{
+    display: flex;
+    justify-content: center;
+    width: 1280px;
+}
+
 header {
     display: flex;
     justify-content: space-between;
-    width: 1280px;
     max-width: 1280px;
+    width: 100%;
     height: 60px;
     background-color: rgb(143, 188, 143);
     text-decoration: none;
@@ -24,9 +30,6 @@ header {
 
 /* === Links === */
 a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: rgb(0, 0, 0);
     text-decoration: none;
 }
@@ -51,11 +54,13 @@ a:active {
     align-items: center;
 }
 
-/* === Hamburger Menu === */
-#hamburger-menu {
-    display: none;
+.navigation-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* === Hamburger Menu === */
 #hamburger-toggle {
     display: none;
 }
@@ -77,28 +82,22 @@ a:active {
         font-size: 20px;
     }
 
+    /* === Header === */
+    .header-container{
+        width: 100%;
+    }
+
     /* === Navigation === */
     .header-navigation {
         gap: 20px;
     }
 }
 
-/* === Responsive: up to 500px === */
-@media (max-width: 500px) {
-    body {
-        font-size: 18px;
-    }
-
-    /* === Navigation === */
-    .header-navigation {
-        gap: 10px;
-    }
-}
-
-/* === Responsive: mobile devices (320px–420px) === */
-@media (max-width: 420px) and (min-width: 320px) {
+/* === Responsive: up to 420px === */
+@media (max-width: 420px) {
     /* === Base Layout === */
     body {
+        font-size: 18px;
         flex-direction: column;
     }
 
@@ -111,10 +110,22 @@ a:active {
     /* === Navigation === */
     .header-navigation {
         display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        margin-top: 0;
+        font-size: 30px;
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 100%;
+        background-color: rgb(255, 255, 255);
+        padding: 20px 0;
+        z-index: 10;
     }
 
     /* === Logo === */
-    label[for="app-store"] {
+    .app-store-label{
         display: none;
     }
 
@@ -134,11 +145,7 @@ a:active {
         display: flex;
     }
 
-    #hamburger-toggle:checked + #hamburger-menu {
+    #hamburger-toggle:checked ~ .header-container header .header-navigation {
         display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        gap: 20px;
-        font-size: 30px;
     }
 }

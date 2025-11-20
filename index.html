@@ -9,20 +9,25 @@
     <title>Stage 3</title>
 </head>
 <body>
+
+<!-- Hidden checkbox for mobile menu -->
+<input type="checkbox" id="hamburger-toggle">
+
+<div class="header-container">
     <!-- Header with navigation menu -->
     <header>
         <!-- Clickable logo with label -->
-        <a href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
+        <a class="navigation-link" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer" aria-label="App Store">
             <img id="app-store-icon" src="/Assets/logos_apple-app-store.svg" alt="App Store icon">
-            <label for="app-store-icon">App Store</label>
+            <span class="app-store-label">App Store</span>
         </a>
 
         <!-- Navigation links -->
         <nav class="header-navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Services</a>
-            <a href="#">Contact</a>
+            <a class="navigation-link" href="#">Home</a>
+            <a class="navigation-link" href="#">About</a>
+            <a class="navigation-link" href="#">Services</a>
+            <a class="navigation-link" href="#">Contact</a>
         </nav>
 
         <!-- Right side with hamburger and avatar -->
@@ -36,16 +41,7 @@
             </a>
         </div>
     </header>
+</div>
 
-    <!-- Hidden checkbox for mobile menu -->
-    <input type="checkbox" id="hamburger-toggle">
-
-    <!-- Mobile hamburger menu -->
-    <nav id="hamburger-menu">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
 </body>
 </html>
