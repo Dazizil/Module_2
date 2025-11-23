@@ -1,0 +1,96 @@
+/* === Fonts === */
+@font-face {
+    src: url("Assets/Roboto_SemiCondensed-Medium.ttf");
+    font-family: 'Roboto SemiCondensed Medium';
+}
+
+/* === Base Styles === */
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto SemiCondensed Medium';
+    color: #f286aa;
+}
+
+body {
+    background-color: #5f5c60;
+    margin: 0;
+    padding: 0;
+}
+
+main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main li {
+    list-style: none;
+    position: relative;
+    padding-left: 1em;
+}
+
+/* Custom list markers */
+main ul > li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: #000;
+}
+
+/* === Profile Image === */
+.profile-link {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 10px solid #000;
+}
+
+/* === Text Formatting === */
+.highlight-word {
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.lowercased-word {
+    text-transform: lowercase;
+}
+
+.uppercased-word {
+    text-transform: uppercase;
+}
+
+/* === Personal Info Section === */
+.personal-info {
+    text-align: center;
+}
+
+.personal-info-text {
+    word-spacing: 10px;
+    text-indent: 2em;
+}
+
+/* Stylized first letter of the paragraph */
+.personal-info-text::first-letter {
+    color: #000;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* === Contacts === */
+.icon-for-contact {
+    width: 20px;
+    height: 20px;
+    fill: #000;
+}
+
+.contact-link {
+    color: #000;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+.contact-item:hover .icon-for-contact {
+    fill: #007bff;
+}
