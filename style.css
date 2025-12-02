@@ -1,0 +1,107 @@
+/* === Base Styles === */
+* {
+    box-sizing: border-box;
+}
+
+/* === Layout === */
+body {
+    display: flex;
+    justify-content: center;
+}
+
+/* === Header === */
+header {
+    width: 100%;
+    background-color: rgb(173, 216, 230);
+}
+
+/* === Aside === */
+aside {
+    width: 100%;
+    min-width: 200px;
+    max-width: 400px;
+    height: calc((100vh - 100px) / 2);
+    max-height: calc((100vh - 100px) / 2);
+    background-color: rgb(32, 178, 170);
+}
+
+/* === Main === */
+main {
+    width: 100%;
+    background-color: rgb(211, 211, 211);
+}
+
+/* === Footer === */
+footer {
+    width: 100%;
+    background-color: rgb(210, 180, 140);
+}
+
+/* === Page Grid === */
+.page-grid {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+    height: 100vh;
+    padding: 0 15px;
+}
+
+/* === Content Grid (Aside + Main) === */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    width: 100%;
+    max-width: 1500px;
+}
+
+/* === Card === */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.card {
+    min-width: 200px;
+    max-height: 200px;
+    text-align: center;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+@media (max-width: 1024px) {
+    /* === Aside === */
+    aside {
+        width: 100%;
+        max-width: 100%;
+        height: 100px;
+    }
+
+    /* === Content Grid === */
+    .content-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 100px 1fr;
+    }
+
+    /* === Cards Grid === */
+    .cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    /* === Cards Grid === */
+    .cards-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    }
+}
