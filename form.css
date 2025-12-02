@@ -1,0 +1,35 @@
+/* === Form === */
+form {
+    width: 600px;
+    margin: 50px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    width: fit-content;
+    margin: 7px;
+}
+
+/* Text area expands horizontally only */
+textarea {
+    resize: horizontal;
+    caret-color: #ff0000;
+}
+
+/* Cursor changes when hovering over the optional area */
+#disabled-field:hover {
+    cursor: help;
+    background-color: #ff0000;
+}
+
+#disabled-field:disabled {
+    background-color: #f9f9f9;
+    border: 1px solid #e0e0e0;
+    color: #666;
+    font-style: italic;
+}

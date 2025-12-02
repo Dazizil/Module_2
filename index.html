@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stage 2</title>
+  <!-- Normalize default browser styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+  <link rel="stylesheet" href="table.css">
+  <link rel="stylesheet" href="form.css">
+  <link rel="stylesheet" href="global.css">
+</head>
+<body>
+  <!-- Table wrapper -->
+  <div class="table-wrapper">
+    <table>
+      <caption>Table</caption>
+      <thead>
+      <tr>
+        <th></th>
+        <th class="horizontal-header">Header</th>
+        <th class="horizontal-header">Header</th>
+        <th class="horizontal-header">Header</th>
+        <th class="horizontal-header">Header</th>
+        <th class="horizontal-header">Header</th>
+        <th class="horizontal-header">Header</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td>Body</td>
+        <td>Body</td>
+        <td>A very long description that should be truncated and not stretch the cell</td>
+        <td>Body</td>
+        <td>Body</td>
+        <td>Body</td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+      <tr>
+        <th class="vertical-header">Header</th>
+        <td colspan="6" style="text-align: center;">Footer</td>
+      </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <!-- Form section -->
+  <form method="post" action="">
+    <fieldset class="form-group">
+      <legend>Form</legend>
+
+      <!-- Text field with minimum number of characters allowed (2) -->
+      <label for="first-input">
+        Text:
+        <input
+                id="first-input"
+                name="first-input"
+                type="text"
+                placeholder="Enter text..."
+                minlength="2"
+                required
+      >
+      </label>
+
+      <!-- Another text field with minimum number of characters allowed (2) -->
+      <label for="second-input">
+        Text:
+        <input
+                id="second-input"
+                name="second-input"
+                type="text"
+                placeholder="Enter text..."
+                minlength="2"
+                required
+        >
+      </label>
+
+      <!-- Text input for email -->
+      <label for="email-input">
+        Email:
+        <input id="email-input" name="email" type="email" placeholder="Enter an email..." required>
+      </label>
+
+      <!-- Text input for phone number according to a specified pattern -->
+      <label for="phone-input">
+        Phone number:
+        <input
+                id="phone-input"
+                name="phone"
+                type="tel"
+                placeholder="Enter a phone number..."
+                pattern="[+]{1}[1-9]{1,3}[0-9]{9,10}"
+                required
+        >
+      </label>
+
+      <!-- Drop-down list with the ability to select the desired option -->
+      <label for="select">
+        Select:
+        <select id="select" name="select" required>
+          <option value="option-1">Option 1</option>
+          <option value="option-2">Option 2</option>
+          <option value="option-3">Option 3</option>
+        </select>
+      </label>
+
+      <!-- Field for entering only digits. Default value is 42 -->
+      <label for="number-input">
+        Number:
+        <input
+                id="number-input"
+                name="number"
+                type="number"
+                value="42"
+                placeholder="Enter a number"
+                required
+        >
+      </label>
+
+      <!-- Group of radio buttons. Selecting one disables the others -->
+      <section class="radio-group">
+        <p>Options:</p>
+        <label for="radio-1">
+          <input id="radio-1" name="group-1" type="radio" required>
+          Option 1
+        </label>
+
+        <label for="radio-2">
+          <input id="radio-2" name="group-1" type="radio" required>
+          Option 2
+        </label>
+
+        <label for="radio-3">
+          <input id="radio-3" name="group-1" type="radio" required>
+          Option 3
+        </label>
+      </section>
+
+      <!-- Multiline text field that expands horizontally only -->
+      <label for="textarea">
+        Text area:
+        <textarea id="textarea" name="textarea" placeholder="Enter text" required></textarea>
+      </label>
+
+      <!-- Field where entered value is hidden and replaced by "*" -->
+      <label for="password-input">
+        Password:
+        <input id="password-input" name="password" type="password" placeholder="Enter a password" required>
+      </label>
+
+      <!-- Optional inactive field. Changes cursor on hover -->
+      <label for="disabled-field">
+        Optional area:
+        <input id="disabled-field" type="text" placeholder="Disabled" disabled>
+      </label>
+
+      <!-- Checkbox with label text toggling the state -->
+      <label for="agree">
+        <input id="agree" name="agree" type="checkbox" required>
+        Checkbox
+      </label>
+
+      <!-- Button that submits the form -->
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+</body>
+</html>

@@ -1,0 +1,48 @@
+/* === Table Wrapper === */
+.table-wrapper {
+    width: 600px;
+    height: 400px;
+    margin: auto;
+    overflow: auto;
+}
+
+/* === Table === */
+table {
+    margin: auto;
+    border: 2px solid #000;
+    border-collapse: collapse;
+    table-layout: fixed;
+    overflow: hidden;
+}
+
+th {
+    background-color: #d3d3d3;
+}
+
+/* Each table cell trims long text and shows "..." if it overflows */
+tbody td, th {
+    border: 1px solid #000;
+    padding: 10px 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+tbody td {
+    max-width: 150px;
+}
+
+tfoot {
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* === Table Headers === */
+.horizontal-header {
+    border: 1px solid #000;
+    font-style: italic;
+}
+
+.vertical-header {
+    text-align: end;
+}
