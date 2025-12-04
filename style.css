@@ -19,6 +19,7 @@ img {
     border-radius: 10px;
     visibility: hidden;
     animation: img-appear 1s ease-out 1.5s 1 forwards;
+    transition: all 0.5s ease;
 }
 
 /* === Card === */
@@ -34,6 +35,7 @@ figure {
     background: linear-gradient(to bottom, rgb(24, 24, 24), rgb(178, 178, 178), rgb(36, 36, 36));
     border-radius: 20px;
     animation: loading-fade-in 1.5s ease-out 0s 1;
+    transition: all 0.5s ease;
 }
 
 .img-container {
